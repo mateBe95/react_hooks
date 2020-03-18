@@ -1,17 +1,13 @@
 pipeline {
-   agent any
+  agent {
+    label 'master'
+  }
 
-   stages {
-      stage('Build') {
-         steps {
-            echo 'Hello World'
-         }
-      }
-      stage('Deploy gh pages') {
-
+  stages {
+    stage ('STAGE NAME') {
+      steps {
         withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
           sh 'npm --version'
         }
-    }
       }
-   }
+    }
