@@ -11,6 +11,13 @@ pipeline {
         }
       }
     }
+            stage ('BULD') {
+      steps {
+        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
+          sh 'npm run build'
+        }
+      }
+    }
     stage ('BUILD AND DEPLOY GH PAGES') {
       steps {
         withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
