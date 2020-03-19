@@ -1,26 +1,29 @@
-
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine' 
-            args '-p 3000:3000' 
-        }
-    }
-    stages {
-        stage('npm i') { 
-                 steps {
+  agent {
+    label 'master'
+  }
+
+  stages {
+        stage ('INSTALL DEPENDENCY') {
+      steps {
         withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
           sh 'npm install'
         }
       }
-        }
-              stage('Build') { 
-                 steps {
+    }
+            stage ('BULD') {
+      steps {
         withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
-          sh 'npm build'
+          sh 'npm run build'
         }
       }
-        }
     }
+    stage ('BUILD AND DEPLOY GH PAGES') {
+      steps {
+        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
+          sh 'npm run deploy'
+        }
+      }
+    }
+  }
 }
-
