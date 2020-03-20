@@ -5,10 +5,11 @@ import {
   VideoCameraOutlined,
   UploadOutlined
 } from "@ant-design/icons";
-
+import './AppMenu.scss'
 export default function AppMenu() {
   return (
     <>
+       <div className="logo" />
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1">
           <UserOutlined />

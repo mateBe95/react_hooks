@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SideNav from "../components/SideNav";
 import { Layout } from "antd";
 import 'antd/dist/antd.css';
-import AppMenu from "../components/AppMenu";
+import AppMenu from "../components/AppMenu/AppMenu";
 import AppHeader from "../components/AppHeader/AppHeader";
 import AppContent from "../components/AppContent";
 
