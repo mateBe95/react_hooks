@@ -4,7 +4,7 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
 } from '@ant-design/icons';
-
+import './AppHeader.scss'
 const {Header} = Layout;
 
 export default function AppHeader(props: any) {

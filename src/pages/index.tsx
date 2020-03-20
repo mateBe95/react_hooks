@@ -3,7 +3,7 @@ import SideNav from "../components/SideNav";
 import { Layout } from "antd";
 import 'antd/dist/antd.css';
 import AppMenu from "../components/AppMenu";
-import AppHeader from "../components/AppHeader";
+import AppHeader from "../components/AppHeader/AppHeader";
 import AppContent from "../components/AppContent";
 
 function useStats() {
