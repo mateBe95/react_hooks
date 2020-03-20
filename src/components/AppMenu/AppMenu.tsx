@@ -5,11 +5,12 @@ import {
   VideoCameraOutlined,
   UploadOutlined
 } from "@ant-design/icons";
-import './AppMenu.scss'
+import "./AppMenu.scss";
+
 export default function AppMenu() {
   return (
     <>
-       <div className="logo" />
+      <div className="logo" />
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1">
           <UserOutlined />
@@ -24,6 +25,6 @@ export default function AppMenu() {
           <span>nav 3</span>
         </Menu.Item>
       </Menu>
-   </>
+    </>
   );
 }

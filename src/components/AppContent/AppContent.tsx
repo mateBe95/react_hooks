@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
+import './AppContent.scss'
 
 const { Content } = Layout;
 export default function AppContent() {
