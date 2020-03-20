@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from "react";
+import SideNav from "../components/SideNav";
+import { Layout } from "antd";
+import 'antd/dist/antd.css';
+import AppMenu from "../components/AppMenu";
+import AppHeader from "../components/AppHeader";
+import AppContent from "../components/AppContent";
 
 function useStats() {
   const [stats, setStats] = useState();
@@ -26,8 +32,14 @@ function Stats() {
 
 export default function IndexPage() {
   return (
-    <div>
-      <Stats></Stats>
-    </div>
+      <Layout>
+        <SideNav>
+          <AppMenu />
+        </SideNav>
+        <Layout className="site-layout">
+          <AppHeader />
+          <AppContent />
+        </Layout>
+      </Layout>
   );
 }
