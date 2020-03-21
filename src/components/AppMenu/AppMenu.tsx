@@ -6,23 +6,32 @@ import {
   UploadOutlined
 } from "@ant-design/icons";
 import "./AppMenu.scss";
+import { Link } from "react-router-dom";
 
 export default function AppMenu() {
   return (
     <>
-      <div className="logo" />
+      <div className="logo"></div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1">
-          <UserOutlined />
-          <span>nav 1</span>
+          <Link to="/">
+            <UserOutlined />
+            <span>First Content</span>
+          </Link>
         </Menu.Item>
+
         <Menu.Item key="2">
-          <VideoCameraOutlined />
-          <span>nav 2</span>
+          <Link to="/secondContent">
+            <VideoCameraOutlined />
+            <span>Second Content</span>
+          </Link>
         </Menu.Item>
+
         <Menu.Item key="3">
-          <UploadOutlined />
-          <span>nav 3</span>
+          <Link to="/thirdContent">
+            <UploadOutlined />
+            <span>Third Content</span>
+          </Link>
         </Menu.Item>
       </Menu>
     </>

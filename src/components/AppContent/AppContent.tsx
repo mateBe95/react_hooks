@@ -1,7 +1,11 @@
 import React from "react";
 import { Layout } from "antd";
 import './AppContent.scss'
-
+import { routes } from "../../routing";
+import {
+  Route,
+  Switch
+} from "react-router-dom";
 const { Content } = Layout;
 export default function AppContent() {
   return (
@@ -14,7 +18,16 @@ export default function AppContent() {
           minHeight: 580
         }}
       >
-        Content
+        <Switch>
+            {routes.map((route: any, index: number) => (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                component={route.component}
+              />
+            ))}
+          </Switch>
       </Content>
     </>
   );
