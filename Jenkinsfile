@@ -1,6 +1,8 @@
 pipeline {
   agent any
 
+  tools {nodejs "recent node"}
+
   stages {
     stage ('Install dependencies') {
         steps {
