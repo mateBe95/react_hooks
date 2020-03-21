@@ -1,22 +1,20 @@
 pipeline {
-  agent {
-    label 'master'
-  }
+  agent any
 
   stages {
-    stage ('INSTALL DEPENDENCY') {
+    stage ('Install dependencies') {
         steps {
             sh 'npm install'
         }
     }
 
-    stage ('BUILD') {
+    stage ('Build') {
         steps {
             sh 'npm run build'
         }
     }
 
-    stage ('BUILD AND DEPLOY GH PAGES') {
+    stage ('Deploy') {
         steps {
             sh 'npm run deploy'
         }
