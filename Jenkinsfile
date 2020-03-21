@@ -4,26 +4,22 @@ pipeline {
   }
 
   stages {
-        stage ('INSTALL DEPENDENCY') {
-      steps {
-        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
-          sh 'npm install'
+    stage ('INSTALL DEPENDENCY') {
+        steps {
+            sh 'npm install'
         }
-      }
     }
-            stage ('BUILD') {
-      steps {
-        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
-          sh 'npm run build'
+
+    stage ('BUILD') {
+        steps {
+            sh 'npm run build'
         }
-      }
     }
+
     stage ('BUILD AND DEPLOY GH PAGES') {
-      steps {
-        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
-          sh 'npm run deploy'
+        steps {
+            sh 'npm run deploy'
         }
-      }
     }
   }
 }
