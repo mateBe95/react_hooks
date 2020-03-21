@@ -15,7 +15,7 @@ export default function AppContent() {
         style={{
           margin: "24px 16px",
           padding: 24,
-          minHeight: 580
+          minHeight: "100vh"
         }}
       >
         <Switch>

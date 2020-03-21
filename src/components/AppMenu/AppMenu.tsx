@@ -11,26 +11,26 @@ import { Link } from "react-router-dom";
 export default function AppMenu() {
   return (
     <>
-      <div className="logo"></div>
+      <div className="logo">COVID-19</div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1">
           <Link to="/">
             <UserOutlined />
-            <span>First Content</span>
+            <span>Dashboard - Polska</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item key="2">
           <Link to="/secondContent">
             <VideoCameraOutlined />
-            <span>Second Content</span>
+            <span>Dashboard - Świat</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item key="3">
           <Link to="/thirdContent">
             <UploadOutlined />
-            <span>Third Content</span>
+            <span>Mapa polski i świata</span>
           </Link>
         </Menu.Item>
       </Menu>
