@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 
 interface CoronaValue {
     value: number;
@@ -17,7 +17,7 @@ type FetchReturn =
 
 function useFetch(url: string) {
     const [data, setData] = useState<CoronaData | undefined>(undefined);
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
    
       async function fetchUrl() {
         const response = await fetch(url);
