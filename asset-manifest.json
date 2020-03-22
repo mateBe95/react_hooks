@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/react_hooks/static/css/main.692f87e8.chunk.css",
-    "main.js": "/react_hooks/static/js/main.9b10626a.chunk.js",
-    "main.js.map": "/react_hooks/static/js/main.9b10626a.chunk.js.map",
+    "main.js": "/react_hooks/static/js/main.ca820b09.chunk.js",
+    "main.js.map": "/react_hooks/static/js/main.ca820b09.chunk.js.map",
     "runtime-main.js": "/react_hooks/static/js/runtime-main.97a017d8.js",
     "runtime-main.js.map": "/react_hooks/static/js/runtime-main.97a017d8.js.map",
     "static/css/2.4b6e3ef2.chunk.css": "/react_hooks/static/css/2.4b6e3ef2.chunk.css",
-    "static/js/2.66baa64c.chunk.js": "/react_hooks/static/js/2.66baa64c.chunk.js",
-    "static/js/2.66baa64c.chunk.js.map": "/react_hooks/static/js/2.66baa64c.chunk.js.map",
+    "static/js/2.fb5523bd.chunk.js": "/react_hooks/static/js/2.fb5523bd.chunk.js",
+    "static/js/2.fb5523bd.chunk.js.map": "/react_hooks/static/js/2.fb5523bd.chunk.js.map",
     "index.html": "/react_hooks/index.html",
-    "precache-manifest.b2c58eba8b32ee6d770a0dbbf8b481a0.js": "/react_hooks/precache-manifest.b2c58eba8b32ee6d770a0dbbf8b481a0.js",
+    "precache-manifest.1075fbe92e5429df7e9baa5f0a2b3860.js": "/react_hooks/precache-manifest.1075fbe92e5429df7e9baa5f0a2b3860.js",
     "service-worker.js": "/react_hooks/service-worker.js",
     "static/css/2.4b6e3ef2.chunk.css.map": "/react_hooks/static/css/2.4b6e3ef2.chunk.css.map",
     "static/css/main.692f87e8.chunk.css.map": "/react_hooks/static/css/main.692f87e8.chunk.css.map",
-    "static/js/2.66baa64c.chunk.js.LICENSE.txt": "/react_hooks/static/js/2.66baa64c.chunk.js.LICENSE.txt"
+    "static/js/2.fb5523bd.chunk.js.LICENSE.txt": "/react_hooks/static/js/2.fb5523bd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.97a017d8.js",
     "static/css/2.4b6e3ef2.chunk.css",
-    "static/js/2.66baa64c.chunk.js",
+    "static/js/2.fb5523bd.chunk.js",
     "static/css/main.692f87e8.chunk.css",
-    "static/js/main.9b10626a.chunk.js"
+    "static/js/main.ca820b09.chunk.js"
   ]
 }
