@@ -2,51 +2,30 @@ import React from "react";
 import CoronaCard from "../Card/CoronaCard";
 import "./FirstContent.scss";
 import { Row } from 'antd';
-const data = [
-  {
-    title: "Wszystkie zarażenia",
-    content: "5000"
-  },
-  {
-    title: "Obecnie zarażonych",
-    content: "90"
-  },
-  {
-    title: "Zgony",
-    content: "8"
-  },
-  {
-    title: "Wszystkich wyleczonych",
-    content: "5"
-  },
-  {
-    title: "Wszystkie testy",
-    content: "15900"
-  },
-  {
-    title: "Hospitalizowani",
-    content: "888"
-  },
-  {
-    title: "Kwarantanna domowa",
-    content: "45999"
-  },
-  {
-    title: "Nadzór epidemologiczny",
-    content: "54900"
-  }
-];
+import { useFetch } from "./hook";
+
+
 
 export default function FirstContent() {
+  const {data, loading} = useFetch('https://covid19.mathdro.id/api/countries/POLAND/')
+
+  console.log(data)
+  if (loading) return <p>Loading...</p>
   return (
     <div className="site-card-wrapper">
      <Row gutter={16}>
-      {data.map((card: any) => (
-        <CoronaCard 
-        title={card.title}
-        content={card.content}
+     <CoronaCard
+        title={"Obecnie zarażonych"}
+        content={data?.confirmed.value}
         />
-      ))}
+           <CoronaCard
+        title={"Wszystkich wyleczonych"}
+        content={data?.recovered.value}
+        />
+           <CoronaCard
+        title={"Zgony"}
+        content={data?.deaths.value}
+        />
       </Row>
     </div>
   );
