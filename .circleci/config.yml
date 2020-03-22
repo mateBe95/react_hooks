@@ -7,6 +7,9 @@ jobs:
       name: node/default
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "80:be:b6:62:97:d3:95:f1:5a:8c:2d:86:55:eb:1c:21"
       - node/with-cache:
           steps:
             - run: git config --local user.email "mateusz.bieda95@gmail.com"
