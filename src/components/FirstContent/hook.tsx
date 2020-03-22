@@ -11,6 +11,10 @@ interface CoronaData {
     deaths: CoronaValue;
 }
 
+type FetchReturn = 
+| {data: CoronaData, loading: false} 
+| {data: undefined, loading: true};
+
 function useFetch(url: string) {
     const [data, setData] = useState<CoronaData | undefined>(undefined);
     const [loading, setLoading] = useState(true)
@@ -27,7 +31,7 @@ function useFetch(url: string) {
         fetchUrl();
     }, []);
   
-    return {data, loading};
+    return {data, loading} as FetchReturn;
   }
   
   export { useFetch }
