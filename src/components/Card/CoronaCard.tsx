@@ -2,18 +2,19 @@ import React from "react";
 import { Card, Col } from "antd";
 import "./CoronaCard.scss"
 
-export default function CoronaCard(props: any) {
+export default function CoronaCard({loading, title, content}: {loading: boolean, title: string, content: any}) {
   return (
     <>
       <Col 
       style={{ padding: 16 }}
       span={8}>
         <Card 
-        title={props.title} 
+        loading={loading}
+        title={title} 
         bordered={false} 
         hoverable
         >
-          {props.content}
+          {content}
         </Card>
       </Col>
     </>

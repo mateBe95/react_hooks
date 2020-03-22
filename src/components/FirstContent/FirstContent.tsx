@@ -9,19 +9,22 @@ export default function FirstContent() {
     const {data, loading} = useFetch('https://covid19.mathdro.id/api/countries/POLAND/');
 
     console.log(data)
-    if (loading) return <p>Loading...</p>
     return (
         <div className="site-card-wrapper">
             <Row gutter={16}>
+
      <CoronaCard
+        loading={loading}
         title={"Obecnie zarażonych"}
         content={data?.confirmed.value}
         />
            <CoronaCard
+        loading={loading}
         title={"Wszystkich wyleczonych"}
         content={data?.recovered.value}
         />
            <CoronaCard
+      loading={loading}
         title={"Zgony"}
         content={data?.deaths.value}
         />
