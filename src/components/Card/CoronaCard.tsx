@@ -7,7 +7,7 @@ export default function CoronaCard(props: any) {
     <>
       <Col 
       style={{ padding: 16 }}
-      span={6}>
+      span={8}>
         <Card 
         title={props.title} 
         bordered={false} 
