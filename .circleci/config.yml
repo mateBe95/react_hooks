@@ -9,6 +9,8 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - run: git config --local user.email "mateusz.bieda95@gmail.com"
+            - run: git config --local user.name "mateBe95"
             - run: npm install
             - run: npm run deploy
 workflows:
