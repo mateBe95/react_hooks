@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Chart from '../Chart/Chart';
 
 export default function SecondContent() {
-    return (
-        <div>
-            Second Content
-        </div>
-    )
+  return (
+    <div>
+      <Chart />
+    </div>
+  );
 }
