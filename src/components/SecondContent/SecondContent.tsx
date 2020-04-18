@@ -1,7 +1,6 @@
 import React from 'react';
 import Chart from '../Chart/Chart';
 import CountryPicker from '../ContryPicker/CountryPicker';
-import { useFetch } from '../api/useFetch';
 
 type CoronaValue = {
   total: number;
