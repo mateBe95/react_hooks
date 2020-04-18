@@ -10,7 +10,7 @@ type CoronaValue = {
 };
 
 type CoronaDataPL = {
-  reportDate: string;
+  lastUpdate: any;
   confirmed: CoronaValue;
   recovered: CoronaValue;
   deaths: CoronaValue;
@@ -28,16 +28,19 @@ export default function FirstContent() {
           loading={loading}
           title="Obecnie zarażonych"
           content={data?.confirmed.value}
+          lastUpdate={data?.lastUpdate}
         />
         <CoronaCard
           loading={loading}
           title="Wszystkich wyleczonych"
           content={data?.recovered.value}
+          lastUpdate={data?.lastUpdate}
         />
         <CoronaCard
           loading={loading}
           title="Zgony"
           content={data?.deaths.value}
+          lastUpdate={data?.lastUpdate}
         />
       </Row>
     </div>

@@ -19,14 +19,18 @@ type CoronaData = [
 ];
 export default function Chart() {
   const { data } = useFetch<CoronaData>('https://covid19.mathdro.id/api/daily');
-  const modifiedData =
-    data &&
-    data.length &&
-    data.map((dailyData: any) => ({
-      confirmed: dailyData.confirmed.total,
-      deaths: dailyData.deaths.total,
-      date: dailyData.reportDate,
-    }));
+  const modifiedData = React.useMemo(() => {
+    return (
+      data &&
+      data.length &&
+      data.map((dailyData: any) => ({
+        confirmed: dailyData.confirmed.total,
+        deaths: dailyData.deaths.total,
+        date: dailyData.reportDate,
+      }))
+    );
+  }, [data]);
+  console.log(modifiedData);
 
   const lineChart =
     modifiedData && modifiedData.length ? (
@@ -36,13 +40,13 @@ export default function Chart() {
           datasets: [
             {
               data: modifiedData?.map(({ confirmed }) => confirmed),
-              label: 'Zainfekowani',
+              label: 'Potwierdzone',
               borderColor: '#3333ff',
               fill: true,
             },
             {
               data: modifiedData?.map(({ deaths }) => deaths),
-              label: 'Liczba zgonów',
+              label: 'Zgony',
               borderColor: 'red',
               backgroundColor: 'rgba(255,0,0,0.5)',
               fill: true,
