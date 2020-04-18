@@ -29,7 +29,7 @@ const CountryPicker = ({ onCountryChange }: { onCountryChange: any }) => {
           onChange={onCountryChange}
           allowClear
         >
-          <Option value="global">Global</Option>
+          <Option value="">Global</Option>
           {COUNTRIES_DATA &&
             COUNTRIES_DATA.map((country: string, index: number) => (
               <Option key={index} value={country}>

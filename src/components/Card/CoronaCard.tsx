@@ -21,7 +21,7 @@ export default function CoronaCard({
           <h2>
             <CountUp start={0} end={content} duration={2.0} separator="," />
           </h2>
-          <div>{new Date(lastUpdate).toDateString()}</div>
+          <div>{new Date(lastUpdate).toLocaleDateString()}</div>
         </Card>
       </Col>
     </>
