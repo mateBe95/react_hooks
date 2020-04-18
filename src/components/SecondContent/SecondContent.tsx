@@ -19,12 +19,8 @@ type CoronaData = [
 
 export default function SecondContent() {
   const [country, setCountry] = React.useState('');
-  const { data } = useFetch<CoronaData>(
-    `https://covid19.mathdro.id/api/countries/${country}`
-  );
 
   const handleCountryChange = async (country: string) => {
-    debugger;
     if (country) {
       await setCountry(country);
     }
