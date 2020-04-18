@@ -1,6 +1,5 @@
 import React from 'react';
 import { Form, Select } from 'antd';
-import styles from './CountryPicker.module.css';
 import { useFetch } from '../api/useFetch';
 const { Option } = Select;
 

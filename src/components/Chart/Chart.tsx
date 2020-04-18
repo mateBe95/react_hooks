@@ -2,7 +2,6 @@ import React from 'react';
 import { useFetch } from '../api/useFetch';
 import { Line } from 'react-chartjs-2';
 import './Chart.css';
-import BarChart from '../BarChart/BarChart';
 
 type CoronaValue = {
   total: number;

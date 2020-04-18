@@ -19,19 +19,9 @@ type CoronaData = [
 
 export default function SecondContent() {
   const [country, setCountry] = React.useState('');
-  const [modifiedData, setModifiedData] = React.useState(null);
   const { data } = useFetch<CoronaData>(
     `https://covid19.mathdro.id/api/countries/${country}`
   );
-
-  const modifiedBarChartData =
-    data &&
-    data.length &&
-    data.map((dailyData: any) => ({
-      confirmed: dailyData.confirmed.value,
-      deaths: dailyData.deaths.value,
-      recovered: dailyData.recovered.value,
-    }));
 
   const handleCountryChange = async (country: string) => {
     debugger;
@@ -43,7 +33,7 @@ export default function SecondContent() {
   return (
     <div>
       <CountryPicker onCountryChange={handleCountryChange} />
-      <Chart barData={modifiedData} country={country} />
+      <Chart barData={undefined} country={country} />
     </div>
   );
 }
