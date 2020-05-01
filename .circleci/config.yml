@@ -9,12 +9,13 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "e0:8c:a1:44:29:59:2f:ef:57:83:b4:3c:b8:c3:db:33"
+            - 'e0:8c:a1:44:29:59:2f:ef:57:83:b4:3c:b8:c3:db:33'
       - node/with-cache:
           steps:
             - run: git config --local user.email "mateusz.bieda95@gmail.com"
             - run: git config --local user.name "mateBe95"
             - run: npm install
+            - run: npm run rebuild node-sass
             - run: npm run deploy
 workflows:
   build-and-test:
