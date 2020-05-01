@@ -3,10 +3,6 @@ import { Form, Select } from 'antd';
 import { useFetch } from '../api/useFetch';
 const { Option } = Select;
 
-type CountriesValue = {
-  name: string;
-};
-
 type Countries = {
   countries: any;
 };

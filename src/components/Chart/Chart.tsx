@@ -2,6 +2,7 @@ import React from 'react';
 import { useFetch } from '../api/useFetch';
 import { Line } from 'react-chartjs-2';
 import './Chart.css';
+import BarChart from '../BarChart/BarChart';
 
 type CoronaValue = {
   total: number;
@@ -18,7 +19,13 @@ type CoronaData = [
   }
 ];
 
-export default function Chart(barData: any, country: string) {
+export default function Chart({
+  barData,
+  country,
+}: {
+  barData: any;
+  country: any;
+}) {
   const { data } = useFetch<CoronaData>('https://covid19.mathdro.id/api/daily');
   const modifiedData = React.useMemo(() => {
     return (
@@ -56,9 +63,19 @@ export default function Chart(barData: any, country: string) {
       />
     ) : null;
 
+  const barChart =
+    barData && barData.confirmed ? (
+      <BarChart
+        confirmed={barData.confirmed.value}
+        recovered={barData.recovered.value}
+        deaths={barData.deaths.value}
+        country={country}
+      />
+    ) : null;
+
   return (
     <div>
-      <div>{lineChart}</div>
+      <div>{country ? barChart : lineChart}</div>
     </div>
   );
 }

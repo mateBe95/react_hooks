@@ -12,7 +12,6 @@ export default function BarChart({
   deaths: number | undefined;
   country: string;
 }) {
-  debugger;
   return (
     <Bar
       data={{
